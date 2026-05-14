@@ -28,21 +28,68 @@ export default function WhyMediYou() {
   const gridRef = useScrollReveal()
 
   return (
-    <section className="section alt-light" id="why">
+    <section className="section" id="why" style={{ background: 'transparent' }}>
       <div className="container">
         <div className="reveal" ref={headRef} style={{ maxWidth: 640, marginBottom: 48 }}>
           <span className="eyebrow">Why MediYou</span>
           <h2 className="section-title">Built entirely <span className="accent-word">around</span> you</h2>
         </div>
 
-        <div className="why-grid reveal-stagger" ref={gridRef}>
+        <div
+          className="why-cards reveal-stagger"
+          ref={gridRef}
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(2, 1fr)',
+            gap: 16,
+          }}
+        >
           {REASONS.map(r => (
-            <div className="why-item" key={r.title}>
-              <span className="ic">{r.icon}</span>
-              <div>
-                <div className="title">{r.title}</div>
-                <p className="body">{r.body}</p>
+            <div
+              className="why-card"
+              key={r.title}
+              style={{
+                background: 'rgba(255,255,255,0.65)',
+                backdropFilter: 'blur(14px)',
+                WebkitBackdropFilter: 'blur(14px)',
+                border: '1px solid rgba(255,255,255,0.85)',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
+                borderRadius: 'var(--radius-md)',
+                padding: '28px 24px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 14,
+                transition: 'transform var(--transition-base) var(--ease-out)',
+                cursor: 'default',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-4px)'
+                e.currentTarget.querySelector('.why-icon-circle').style.transform = 'scale(1.1)'
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)'
+                e.currentTarget.querySelector('.why-icon-circle').style.transform = 'scale(1)'
+              }}
+            >
+              <div
+                className="why-icon-circle"
+                style={{
+                  width: 44,
+                  height: 44,
+                  borderRadius: '50%',
+                  background: 'rgba(0,168,133,0.1)',
+                  color: 'var(--medi-green)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                  transition: 'transform var(--transition-base) var(--ease-out)',
+                }}
+              >
+                {r.icon}
               </div>
+              <div style={{ fontWeight: 500, fontSize: 18 }}>{r.title}</div>
+              <p style={{ margin: 0, color: 'var(--text-soft)', lineHeight: 1.6 }}>{r.body}</p>
             </div>
           ))}
         </div>

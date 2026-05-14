@@ -2,31 +2,28 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const SURGEONS = [
   {
-    initials: 'AM',
+    photo: 'https://images.unsplash.com/photo-1559839672-10e7b1d9d76c?w=80&h=80&fit=crop&auto=format&q=80',
     name: 'Dr. Anjali Mehta',
     spec: 'Bariatric & Laparoscopic Surgeon',
     meta: '14 years experience · Pune',
     quote: '"I chose MediYou because it lets me focus entirely on the patient. The coordination, insurance, and follow-up are handled — so when I meet a patient, we talk only about their health."',
     procedures: 312,
-    avatarStyle: {},
   },
   {
-    initials: 'RK',
+    photo: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=80&h=80&fit=crop&auto=format&q=80',
     name: 'Dr. Rajan Kulkarni',
     spec: 'Proctologist & General Surgeon',
     meta: '11 years experience · Delhi',
     quote: '"My patients come in anxious and leave reassured. MediYou gives them the support system around the surgery that I can\'t provide alone — and it shows in their recovery."',
     procedures: 248,
-    avatarStyle: { background: 'var(--medi-orange)' },
   },
   {
-    initials: 'PN',
+    photo: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=80&h=80&fit=crop&auto=format&q=80',
     name: 'Dr. Priya Nambiar',
     spec: 'Gynaecologist & Laparoscopic Surgeon',
     meta: '9 years experience · Pune & Delhi',
     quote: '"The patients who come through MediYou are better informed and less scared. That makes my job easier and their outcomes better. It\'s a genuine partnership."',
     procedures: 197,
-    avatarStyle: {},
   },
 ]
 
@@ -35,7 +32,7 @@ export default function Surgeons() {
   const gridRef = useScrollReveal()
 
   return (
-    <section className="section alt-white" id="surgeons">
+    <section className="section" id="surgeons" style={{ background: 'transparent' }}>
       <div className="container">
         <div className="reveal" ref={headRef} style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto 56px' }}>
           <span className="eyebrow">Our surgeons</span>
@@ -46,7 +43,18 @@ export default function Surgeons() {
           {SURGEONS.map(s => (
             <div className="surgeon-card" key={s.name}>
               <div className="surgeon-head">
-                <div className="surgeon-avatar" style={s.avatarStyle}>{s.initials}</div>
+                <img
+                  src={s.photo}
+                  alt={s.name}
+                  className="surgeon-avatar"
+                  style={{
+                    width: 56,
+                    height: 56,
+                    borderRadius: '50%',
+                    objectFit: 'cover',
+                    border: '2px solid var(--medi-green-tint)',
+                  }}
+                />
                 <div>
                   <div className="surgeon-name">{s.name}</div>
                   <div className="surgeon-spec">{s.spec}</div>

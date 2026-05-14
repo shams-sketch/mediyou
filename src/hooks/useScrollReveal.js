@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-export function useScrollReveal() {
+export function useScrollReveal(options = {}) {
   const ref = useRef(null)
 
   useEffect(() => {
@@ -19,7 +19,10 @@ export function useScrollReveal() {
           io.disconnect()
         }
       },
-      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+      {
+        threshold: options.threshold ?? 0.12,
+        rootMargin: options.rootMargin ?? '0px 0px -40px 0px',
+      }
     )
     io.observe(el)
     return () => io.disconnect()

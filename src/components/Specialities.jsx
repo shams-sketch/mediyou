@@ -1,51 +1,81 @@
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const ArrowIcon = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M5 12h14M13 6l6 6-6 6"/>
   </svg>
 )
 
+const SpecIllustration = () => (
+  <svg width="200" height="148" viewBox="0 0 200 148" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style={{ flexShrink: 0 }}>
+    <circle cx="100" cy="68" r="58" fill="rgba(0,168,133,0.05)" />
+    <circle cx="100" cy="68" r="38" fill="rgba(0,168,133,0.08)" />
+    <rect x="87" y="46" width="26" height="44" rx="6" fill="rgba(0,168,133,0.2)" />
+    <rect x="78" y="55" width="44" height="26" rx="6" fill="rgba(0,168,133,0.2)" />
+    <rect x="90" y="49" width="20" height="38" rx="4" fill="rgba(0,168,133,0.15)" />
+    <rect x="81" y="58" width="38" height="20" rx="4" fill="rgba(0,168,133,0.15)" />
+    <path d="M18 126 L50 126 L62 106 L76 144 L88 116 L100 132 L112 126 L182 126"
+      stroke="rgba(255,116,45,0.5)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    <circle cx="30" cy="26" r="4" fill="rgba(0,168,133,0.22)" />
+    <circle cx="170" cy="24" r="4" fill="rgba(0,168,133,0.22)" />
+    <circle cx="22" cy="88" r="3" fill="rgba(255,116,45,0.22)" />
+    <circle cx="178" cy="90" r="3" fill="rgba(255,116,45,0.22)" />
+    <path d="M158 44 h10 m-5-5 v10" stroke="rgba(0,168,133,0.3)" strokeWidth="2" strokeLinecap="round" />
+    <path d="M30 50 h8 m-4-4 v8" stroke="rgba(255,116,45,0.3)" strokeWidth="2" strokeLinecap="round" />
+  </svg>
+)
+
+/* Unsplash photos — each curated for its treatment */
 const SPECIALITIES = [
   {
-    name: 'Proctology', desc: 'Piles, Fistula, Fissure',
-    icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><circle cx="18" cy="14" r="2"/><path d="M14 14v3a4 4 0 0 0 8 0v-2"/></svg>,
+    name: 'Proctology',
+    desc: 'Piles, Fistula, Fissure',
+    img: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=280&fit=crop&auto=format&q=80',
   },
   {
-    name: 'Laparoscopy', desc: 'Hernia, Gallstones',
-    icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>,
+    name: 'Laparoscopy',
+    desc: 'Hernia, Gallstones',
+    img: 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=280&fit=crop&auto=format&q=80',
   },
   {
-    name: 'Gynaecology', desc: 'Cysts, Fibroids, PCOS',
-    icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 21s-7-4.35-7-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.65-7 11-7 11"/></svg>,
+    name: 'Gynaecology',
+    desc: 'Cysts, Fibroids, PCOS',
+    img: 'https://images.unsplash.com/photo-1584515933487-779ac9e97e8c?w=400&h=280&fit=crop&auto=format&q=80',
   },
   {
-    name: 'ENT', desc: 'Tonsils, Sinus, Ear',
-    icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 4a4 4 0 0 0-4 4v8a4 4 0 0 0 8 0v-3a3 3 0 0 1 3-3h3"/><path d="M9 9h2"/></svg>,
+    name: 'ENT',
+    desc: 'Tonsils, Sinus, Ear',
+    img: 'https://images.unsplash.com/photo-1588776814546-1ffbb172871e?w=400&h=280&fit=crop&auto=format&q=80',
   },
   {
-    name: 'Urology', desc: 'Kidney Stones, Circumcision',
-    icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 4a5 5 0 0 1 10 0v3a5 5 0 0 1-2 4 5 5 0 0 0-2 4v5"/><circle cx="12" cy="7" r="2"/></svg>,
+    name: 'Urology',
+    desc: 'Kidney Stones, Circumcision',
+    img: 'https://images.unsplash.com/photo-1586773860383-dab4bb00a5e1?w=400&h=280&fit=crop&auto=format&q=80',
   },
   {
-    name: 'Vascular', desc: 'Varicose Veins, DVT',
-    icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 4c4 0 4 6 7 6s3-6 7-6"/><path d="M5 12c4 0 4 6 7 6s3-6 7-6"/></svg>,
+    name: 'Vascular',
+    desc: 'Varicose Veins, DVT',
+    img: 'https://images.unsplash.com/photo-1530026405-a5ba7d95c2e2?w=400&h=280&fit=crop&auto=format&q=80',
   },
   {
-    name: 'Aesthetics', desc: 'Gynecomastia, Liposuction',
-    icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l2.6 5.5 6 .9-4.3 4.2 1 6L12 16.8 6.7 19.6l1-6-4.3-4.2 6-.9z"/></svg>,
+    name: 'Aesthetics',
+    desc: 'Gynecomastia, Liposuction',
+    img: 'https://images.unsplash.com/photo-1521510895919-46920266ddb3?w=400&h=280&fit=crop&auto=format&q=80',
   },
   {
-    name: 'Orthopedics', desc: 'Knee, Spine, Joints',
-    icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 3l3 3-3 3M9 6h6M18 9l-3 3 3 3M15 12H9M6 15l3 3-3 3"/></svg>,
+    name: 'Orthopedics',
+    desc: 'Knee, Spine, Joints',
+    img: 'https://images.unsplash.com/photo-1631217868264-e6e3a7e1dcff?w=400&h=280&fit=crop&auto=format&q=80',
   },
   {
-    name: 'Ophthalmology', desc: 'Cataract, LASIK',
-    icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>,
+    name: 'Ophthalmology',
+    desc: 'Cataract, LASIK',
+    img: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=280&fit=crop&auto=format&q=80',
   },
   {
-    name: 'IVF & Fertility', desc: 'IVF, IUI, Fertility',
-    icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg>,
+    name: 'IVF & Fertility',
+    desc: 'IVF, IUI, Fertility',
+    img: 'https://images.unsplash.com/photo-1519689680058-324335573bb0?w=400&h=280&fit=crop&auto=format&q=80',
   },
 ]
 
@@ -61,15 +91,25 @@ export default function Specialities() {
             <span className="eyebrow">What we treat</span>
             <h2 className="section-title">What would you like <span className="accent-word">help</span> with?</h2>
           </div>
+          <SpecIllustration />
         </div>
 
         <div className="specialities-grid reveal-stagger" ref={gridRef}>
           {SPECIALITIES.map(s => (
             <a className="spec-card" href="#" key={s.name}>
-              <span className="ic">{s.icon}</span>
-              <div className="name">{s.name}</div>
-              <div className="desc">{s.desc}</div>
-              <span className="arrow">Learn more <ArrowIcon /></span>
+              <div className="spec-card-img-wrap">
+                <img
+                  className="spec-card-img"
+                  src={s.img}
+                  alt={s.name}
+                  loading="lazy"
+                />
+              </div>
+              <div className="spec-card-body">
+                <div className="name">{s.name}</div>
+                <div className="desc">{s.desc}</div>
+                <span className="arrow">Learn more <ArrowIcon /></span>
+              </div>
             </a>
           ))}
         </div>

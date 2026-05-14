@@ -12,10 +12,12 @@ import Reviews from './components/Reviews'
 import CTABanner from './components/CTABanner'
 import Cities from './components/Cities'
 import Footer from './components/Footer'
+import { PopupProvider } from './context/PopupContext'
+import PopupModal from './components/PopupModal'
 
 export default function App() {
   return (
-    <>
+    <PopupProvider>
       <Loader />
       <div className="announce">
         Free consultation + insurance support on every surgery — Call <strong>1800-XXX-XXXX</strong> · Mon–Sat 8am–8pm
@@ -33,6 +35,7 @@ export default function App() {
       <CTABanner />
       <Cities />
       <Footer />
-    </>
+      <PopupModal />
+    </PopupProvider>
   )
 }

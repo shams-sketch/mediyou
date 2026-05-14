@@ -22,12 +22,12 @@ export default function Cities() {
   const gridRef = useScrollReveal()
 
   return (
-    <section className="section alt-white" id="cities">
+    <section className="section" id="cities" style={{ background: 'transparent' }}>
       <div className="container">
         <div className="reveal" ref={headRef} style={{ maxWidth: 720, marginBottom: 48 }}>
           <span className="eyebrow">Where we operate</span>
           <h2 className="section-title">Available in <span className="accent-word">Pune</span> &amp; Delhi</h2>
-          <p className="section-sub" style={{ marginBottom: 0 }}>
+          <p className="section-sub" style={{ marginBottom: 0, maxWidth: 'none' }}>
             Partner hospitals and specialist clinics across both cities — with more cities coming soon.
           </p>
         </div>
