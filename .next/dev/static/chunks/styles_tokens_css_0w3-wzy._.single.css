@@ -1,0 +1,92 @@
+/* [project]/styles/tokens.css [app-client] (css) */
+@font-face {
+  font-family: Helvetica Neue;
+  font-weight: 100;
+  font-style: normal;
+  src: url("/design-system/fonts/HelveticaNeueUltraLight.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Helvetica Neue;
+  font-weight: 200;
+  font-style: normal;
+  src: url("/design-system/fonts/HelveticaNeueThin.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Helvetica Neue;
+  font-weight: 300;
+  font-style: normal;
+  src: url("/design-system/fonts/HelveticaNeueLight.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Helvetica Neue;
+  font-weight: 400;
+  font-style: normal;
+  src: url("/design-system/fonts/HelveticaNeueRoman.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Helvetica Neue;
+  font-weight: 500;
+  font-style: normal;
+  src: url("/design-system/fonts/HelveticaNeueMedium.otf") format("opentype");
+  font-display: swap;
+}
+
+:root {
+  --medi-green: #00a885;
+  --medi-green-dark: #007d63;
+  --medi-green-tint: #e6f7f3;
+  --medi-green-extra-light: #f0faf7;
+  --medi-orange: #ff742d;
+  --medi-orange-dark: #d95e1e;
+  --medi-orange-tint: #fff2ec;
+  --medi-orange-extra-light: #fff8f5;
+  --neutral-0: #fff;
+  --neutral-50: #f9fafb;
+  --neutral-100: #f3f4f6;
+  --neutral-200: #e5e7eb;
+  --neutral-300: #d1d5db;
+  --neutral-500: #6b7280;
+  --neutral-700: #374151;
+  --neutral-800: #1f2937;
+  --neutral-950: #0f1a2e;
+  --fg-strong: var(--neutral-800);
+  --fg-muted: var(--neutral-500);
+  --text-soft: var(--neutral-500);
+  --fg-on-dark: #fff;
+  --fg-on-dark-muted: #ffffffb8;
+  --bg-page: var(--neutral-0);
+  --bg-section-light: var(--neutral-50);
+  --bg-section-green: var(--medi-green-extra-light);
+  --bg-section-orange: var(--medi-orange-extra-light);
+  --bg-footer: var(--neutral-950);
+  --border-default: var(--neutral-200);
+  --border-glass: #fffc;
+  --bg-hero-gradient: linear-gradient(135deg, #fff 0%, #fbfdfc 40%, #e6f7f3 100%);
+  --glass-bg: #ffffffa6;
+  --glass-bg-hover: #ffffffc7;
+  --glass-blur: 12px;
+  --radius-xs: 4px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --tracking-eyebrow: .12em;
+  --shadow-elevation: 0 2px 8px #0f1a2e0a, 0 1px 2px #0f1a2e0a;
+  --shadow-lift: 0 6px 18px #0f1a2e0f, 0 2px 4px #0f1a2e0a;
+  --focus-ring: 0 0 0 4px #00a8852e;
+  --ease-out: cubic-bezier(.22, .61, .36, 1);
+  --transition-fast: .12s var(--ease-out);
+  --transition-base: .2s var(--ease-out);
+  --transition-slow: .3s var(--ease-out);
+}
+
+/*# sourceMappingURL=styles_tokens_css_0w3-wzy._.single.css.map*/
