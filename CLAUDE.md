@@ -3,7 +3,7 @@
 ## Project Overview
 
 Healthcare landing page for **MediYou** — a surgery coordination service in Pune and Delhi.  
-This is the **Next.js 15 migration** of the original Vite + React project (`MediYou Landing page/react-app`).
+This is the **Next.js 15** project, located at `MediYou Landing page/react-app/`.
 
 **Brand colors:** Green `#00a885` · Orange `#ff742d`  
 **Tagline:** Aap Ki Sehat Ka Naya Sathi
