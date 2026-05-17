@@ -5,6 +5,11 @@ export const metadata = {
   title: 'MediYou — Aap Ki Sehat Ka Naya Sathi',
   description: 'MediYou connects you to Pune and Delhi\'s top specialist surgeons. Free consultations, cashless insurance, and care at every step.',
   keywords: 'surgery, specialist, Pune, Delhi, cashless insurance, piles, hernia, weight loss, bariatric',
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
   openGraph: {
     title: 'MediYou — Aap Ki Sehat Ka Naya Sathi',
     description: 'Free consultations, cashless insurance, and care at every step.',
