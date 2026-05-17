@@ -70,11 +70,845 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
 }),
-"[project]/components/PopupModal.jsx [app-client] (ecmascript)", ((__turbopack_context__, module, exports) => {
+"[project]/components/PopupModal.jsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
 
-const e = new Error("Could not parse module '[project]/components/PopupModal.jsx'\n\nExpected '</', got 'ident'");
-e.code = 'MODULE_UNPARSABLE';
-throw e;
+__turbopack_context__.s([
+    "default",
+    ()=>PopupModal
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$PopupContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/context/PopupContext.jsx [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature(), _s2 = __turbopack_context__.k.signature(), _s3 = __turbopack_context__.k.signature();
+'use client';
+;
+;
+const CONDITIONS = [
+    'Weight loss surgery',
+    'Piles / Fistula / Fissure',
+    'Hernia',
+    'Gallstones',
+    'Gynaecology',
+    'Kidney stones',
+    'Varicose veins',
+    'Cataract / LASIK',
+    'Knee / Spine',
+    'Other'
+];
+const STEPS = [
+    {
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+            width: "20",
+            height: "20",
+            viewBox: "0 0 24 24",
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "1.75",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                d: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.3 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+            }, void 0, false, {
+                fileName: "[project]/components/PopupModal.jsx",
+                lineNumber: 22,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/components/PopupModal.jsx",
+            lineNumber: 21,
+            columnNumber: 7
+        }, ("TURBOPACK compile-time value", void 0)),
+        title: 'Share your details',
+        body: 'Our care coordinator gets in touch within 2 hours.'
+    },
+    {
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+            width: "20",
+            height: "20",
+            viewBox: "0 0 24 24",
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "1.75",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                    d: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                }, void 0, false, {
+                    fileName: "[project]/components/PopupModal.jsx",
+                    lineNumber: 31,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
+                    points: "14 2 14 8 20 8"
+                }, void 0, false, {
+                    fileName: "[project]/components/PopupModal.jsx",
+                    lineNumber: 31,
+                    columnNumber: 79
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                    x1: "16",
+                    y1: "13",
+                    x2: "8",
+                    y2: "13"
+                }, void 0, false, {
+                    fileName: "[project]/components/PopupModal.jsx",
+                    lineNumber: 31,
+                    columnNumber: 114
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                    x1: "16",
+                    y1: "17",
+                    x2: "8",
+                    y2: "17"
+                }, void 0, false, {
+                    fileName: "[project]/components/PopupModal.jsx",
+                    lineNumber: 31,
+                    columnNumber: 152
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
+                    points: "10 9 9 9 8 9"
+                }, void 0, false, {
+                    fileName: "[project]/components/PopupModal.jsx",
+                    lineNumber: 31,
+                    columnNumber: 190
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/components/PopupModal.jsx",
+            lineNumber: 30,
+            columnNumber: 7
+        }, ("TURBOPACK compile-time value", void 0)),
+        title: 'We understand your condition',
+        body: 'The coordinator listens and maps your symptoms to the right specialist.'
+    },
+    {
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+            width: "20",
+            height: "20",
+            viewBox: "0 0 24 24",
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "1.75",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
+                    x: "3",
+                    y: "4",
+                    width: "18",
+                    height: "18",
+                    rx: "2",
+                    ry: "2"
+                }, void 0, false, {
+                    fileName: "[project]/components/PopupModal.jsx",
+                    lineNumber: 40,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                    x1: "16",
+                    y1: "2",
+                    x2: "16",
+                    y2: "6"
+                }, void 0, false, {
+                    fileName: "[project]/components/PopupModal.jsx",
+                    lineNumber: 40,
+                    columnNumber: 65
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                    x1: "8",
+                    y1: "2",
+                    x2: "8",
+                    y2: "6"
+                }, void 0, false, {
+                    fileName: "[project]/components/PopupModal.jsx",
+                    lineNumber: 40,
+                    columnNumber: 102
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                    x1: "3",
+                    y1: "10",
+                    x2: "21",
+                    y2: "10"
+                }, void 0, false, {
+                    fileName: "[project]/components/PopupModal.jsx",
+                    lineNumber: 40,
+                    columnNumber: 137
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                    d: "M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"
+                }, void 0, false, {
+                    fileName: "[project]/components/PopupModal.jsx",
+                    lineNumber: 40,
+                    columnNumber: 175
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/components/PopupModal.jsx",
+            lineNumber: 39,
+            columnNumber: 7
+        }, ("TURBOPACK compile-time value", void 0)),
+        title: 'Consultation scheduled',
+        body: 'Your appointment is confirmed at the earliest available slot.'
+    }
+];
+function FloatingField({ id, name, type = 'text', label, autoComplete }) {
+    _s();
+    const [filled, setFilled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: `field${filled ? ' is-filled' : ''}`,
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                type: type,
+                id: id,
+                name: name,
+                autoComplete: autoComplete,
+                required: true,
+                onChange: (e)=>setFilled(e.target.value.length > 0)
+            }, void 0, false, {
+                fileName: "[project]/components/PopupModal.jsx",
+                lineNumber: 52,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                htmlFor: id,
+                children: label
+            }, void 0, false, {
+                fileName: "[project]/components/PopupModal.jsx",
+                lineNumber: 60,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/PopupModal.jsx",
+        lineNumber: 51,
+        columnNumber: 5
+    }, this);
+}
+_s(FloatingField, "MkQi+4uT0GV4Vp4Wmxhf6xJST84=");
+_c = FloatingField;
+function PhoneField({ id, name }) {
+    _s1();
+    const [digits, setDigits] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
+    const [focused, setFocused] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
+    const active = focused || digits.length > 0;
+    function handleChange(e) {
+        const val = e.target.value.replace(/\D/g, '').slice(0, 10);
+        setDigits(val);
+        if (error) setError('');
+    }
+    function handleBlur() {
+        setFocused(false);
+        if (digits.length > 0 && digits.length !== 10) setError('Enter a valid 10-digit number');
+    }
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "phone-wrap",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `phone-field-box${active ? ' active' : ''}${focused ? ' focused' : ''}${error ? ' has-error' : ''}`,
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "phone-field-label",
+                        children: "Mobile number"
+                    }, void 0, false, {
+                        fileName: "[project]/components/PopupModal.jsx",
+                        lineNumber: 85,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "phone-input-row",
+                        children: [
+                            active && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "phone-prefix",
+                                children: "+91"
+                            }, void 0, false, {
+                                fileName: "[project]/components/PopupModal.jsx",
+                                lineNumber: 87,
+                                columnNumber: 22
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                type: "tel",
+                                id: id,
+                                name: name,
+                                value: digits,
+                                inputMode: "numeric",
+                                autoComplete: "tel",
+                                required: true,
+                                onChange: handleChange,
+                                onFocus: ()=>{
+                                    setFocused(true);
+                                    setError('');
+                                },
+                                onBlur: handleBlur
+                            }, void 0, false, {
+                                fileName: "[project]/components/PopupModal.jsx",
+                                lineNumber: 88,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/PopupModal.jsx",
+                        lineNumber: 86,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/PopupModal.jsx",
+                lineNumber: 84,
+                columnNumber: 7
+            }, this),
+            error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "field-error",
+                children: error
+            }, void 0, false, {
+                fileName: "[project]/components/PopupModal.jsx",
+                lineNumber: 102,
+                columnNumber: 17
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/PopupModal.jsx",
+        lineNumber: 83,
+        columnNumber: 5
+    }, this);
+}
+_s1(PhoneField, "t2GpWz9CsgysugvTu7Ix0MuCu2k=");
+_c1 = PhoneField;
+function FloatingSelect({ id, name, label, options, initialValue = '' }) {
+    _s2();
+    const [value, setValue] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(initialValue);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "FloatingSelect.useEffect": ()=>{
+            setValue(initialValue);
+        }
+    }["FloatingSelect.useEffect"], [
+        initialValue
+    ]);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: `field${value ? ' has-value' : ''}`,
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
+                id: id,
+                name: name,
+                required: true,
+                value: value,
+                onChange: (e)=>setValue(e.target.value),
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                        value: "",
+                        disabled: true
+                    }, void 0, false, {
+                        fileName: "[project]/components/PopupModal.jsx",
+                        lineNumber: 123,
+                        columnNumber: 9
+                    }, this),
+                    options.map((o)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                            value: o,
+                            children: o
+                        }, o, false, {
+                            fileName: "[project]/components/PopupModal.jsx",
+                            lineNumber: 124,
+                            columnNumber: 27
+                        }, this))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/PopupModal.jsx",
+                lineNumber: 116,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                htmlFor: id,
+                children: label
+            }, void 0, false, {
+                fileName: "[project]/components/PopupModal.jsx",
+                lineNumber: 126,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/PopupModal.jsx",
+        lineNumber: 115,
+        columnNumber: 5
+    }, this);
+}
+_s2(FloatingSelect, "tWiMN+R1KrlPc+I/v9D+hnPBFtc=");
+_c2 = FloatingSelect;
+function PopupModal() {
+    _s3();
+    const { isOpen, condition, closePopup } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$PopupContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePopup"])();
+    const [btnState, setBtnState] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [insurance, setInsurance] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const formRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    // Lock / unlock body scroll
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "PopupModal.useEffect": ()=>{
+            if (isOpen) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+            return ({
+                "PopupModal.useEffect": ()=>{
+                    document.body.style.overflow = '';
+                }
+            })["PopupModal.useEffect"];
+        }
+    }["PopupModal.useEffect"], [
+        isOpen
+    ]);
+    async function handleSubmit(e) {
+        e.preventDefault();
+        if (btnState) return;
+        setBtnState('loading');
+        const data = new FormData(formRef.current);
+        try {
+            const res = await fetch('/api/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: data.get('name'),
+                    phone: data.get('phone') ? `+91 ${data.get('phone')}` : '',
+                    city: data.get('city'),
+                    condition: data.get('condition'),
+                    insurance: insurance || 'Not specified'
+                })
+            });
+            if (res.ok) {
+                setBtnState('done');
+                setTimeout(()=>{
+                    setBtnState(null);
+                    setInsurance(null);
+                    formRef.current?.reset();
+                }, 1800);
+            } else {
+                setBtnState(null);
+                alert('Something went wrong. Please try again.');
+            }
+        } catch  {
+            setBtnState(null);
+            alert('Something went wrong. Please try again.');
+        }
+    }
+    function handleOverlayClick(e) {
+        if (e.target === e.currentTarget) closePopup();
+    }
+    if (!isOpen) return null;
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "popup-overlay",
+        onClick: handleOverlayClick,
+        role: "dialog",
+        "aria-modal": "true",
+        "aria-label": "Free consultation popup",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "popup-card",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    className: "popup-close",
+                    onClick: closePopup,
+                    "aria-label": "Close",
+                    type: "button",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                        width: "18",
+                        height: "18",
+                        viewBox: "0 0 24 24",
+                        fill: "none",
+                        stroke: "currentColor",
+                        strokeWidth: "2",
+                        strokeLinecap: "round",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                x1: "18",
+                                y1: "6",
+                                x2: "6",
+                                y2: "18"
+                            }, void 0, false, {
+                                fileName: "[project]/components/PopupModal.jsx",
+                                lineNumber: 202,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                                x1: "6",
+                                y1: "6",
+                                x2: "18",
+                                y2: "18"
+                            }, void 0, false, {
+                                fileName: "[project]/components/PopupModal.jsx",
+                                lineNumber: 202,
+                                columnNumber: 50
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/PopupModal.jsx",
+                        lineNumber: 201,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/components/PopupModal.jsx",
+                    lineNumber: 195,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "popup-left",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "popup-eyebrow",
+                            children: "Free Consultation"
+                        }, void 0, false, {
+                            fileName: "[project]/components/PopupModal.jsx",
+                            lineNumber: 208,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                            className: "popup-title",
+                            children: "Simplifying Your Surgery Journey"
+                        }, void 0, false, {
+                            fileName: "[project]/components/PopupModal.jsx",
+                            lineNumber: 209,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "popup-subtitle",
+                            children: "Expert surgeons for 50+ conditions, covered by insurance"
+                        }, void 0, false, {
+                            fileName: "[project]/components/PopupModal.jsx",
+                            lineNumber: 210,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ol", {
+                            className: "popup-steps",
+                            children: STEPS.map((step, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    className: "popup-step",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "popup-step-icon",
+                                            children: step.icon
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/PopupModal.jsx",
+                                            lineNumber: 215,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "popup-step-text",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "popup-step-title",
+                                                    children: step.title
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/PopupModal.jsx",
+                                                    lineNumber: 217,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "popup-step-body",
+                                                    children: step.body
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/PopupModal.jsx",
+                                                    lineNumber: 218,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/components/PopupModal.jsx",
+                                            lineNumber: 216,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, i, true, {
+                                    fileName: "[project]/components/PopupModal.jsx",
+                                    lineNumber: 214,
+                                    columnNumber: 15
+                                }, this))
+                        }, void 0, false, {
+                            fileName: "[project]/components/PopupModal.jsx",
+                            lineNumber: 212,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "popup-stats",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "popup-stat",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "popup-stat-num",
+                                            children: "50,000+"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/PopupModal.jsx",
+                                            lineNumber: 226,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "popup-stat-label",
+                                            children: "Happy Patients"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/PopupModal.jsx",
+                                            lineNumber: 227,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/PopupModal.jsx",
+                                    lineNumber: 225,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "popup-stat-divider"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/PopupModal.jsx",
+                                    lineNumber: 229,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "popup-stat",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "popup-stat-num",
+                                            children: "50+"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/PopupModal.jsx",
+                                            lineNumber: 231,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "popup-stat-label",
+                                            children: "Specialities"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/PopupModal.jsx",
+                                            lineNumber: 232,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/PopupModal.jsx",
+                                    lineNumber: 230,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "popup-stat-divider"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/PopupModal.jsx",
+                                    lineNumber: 234,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "popup-stat",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "popup-stat-num",
+                                            children: "2"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/PopupModal.jsx",
+                                            lineNumber: 236,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "popup-stat-label",
+                                            children: "Cities"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/PopupModal.jsx",
+                                            lineNumber: 237,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/PopupModal.jsx",
+                                    lineNumber: 235,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/PopupModal.jsx",
+                            lineNumber: 224,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/components/PopupModal.jsx",
+                    lineNumber: 207,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "popup-right",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
+                        className: "popup-form",
+                        ref: formRef,
+                        onSubmit: handleSubmit,
+                        noValidate: true,
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                className: "popup-form-title",
+                                children: "Book a Free Consultation"
+                            }, void 0, false, {
+                                fileName: "[project]/components/PopupModal.jsx",
+                                lineNumber: 250,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "popup-form-sub",
+                                children: "Our team calls back within 2 hours."
+                            }, void 0, false, {
+                                fileName: "[project]/components/PopupModal.jsx",
+                                lineNumber: 251,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FloatingField, {
+                                id: "pf-name",
+                                name: "name",
+                                label: "Full name",
+                                autoComplete: "name"
+                            }, void 0, false, {
+                                fileName: "[project]/components/PopupModal.jsx",
+                                lineNumber: 253,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(PhoneField, {
+                                id: "pf-phone",
+                                name: "phone"
+                            }, void 0, false, {
+                                fileName: "[project]/components/PopupModal.jsx",
+                                lineNumber: 254,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FloatingSelect, {
+                                id: "pf-city",
+                                name: "city",
+                                label: "City",
+                                options: [
+                                    'Pune',
+                                    'Delhi'
+                                ]
+                            }, void 0, false, {
+                                fileName: "[project]/components/PopupModal.jsx",
+                                lineNumber: 256,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FloatingSelect, {
+                                id: "pf-cond",
+                                name: "condition",
+                                label: "Condition",
+                                options: CONDITIONS,
+                                initialValue: condition
+                            }, void 0, false, {
+                                fileName: "[project]/components/PopupModal.jsx",
+                                lineNumber: 257,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "ins-toggle-wrap",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "ins-toggle-label",
+                                        children: "Do you have health insurance?"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/PopupModal.jsx",
+                                        lineNumber: 260,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "ins-toggle",
+                                        role: "group",
+                                        "aria-label": "Insurance",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                type: "button",
+                                                className: `ins-opt${insurance === 'yes' ? ' active' : ''}`,
+                                                onClick: ()=>setInsurance('yes'),
+                                                children: "Yes"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/PopupModal.jsx",
+                                                lineNumber: 262,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                type: "button",
+                                                className: `ins-opt${insurance === 'no' ? ' active' : ''}`,
+                                                onClick: ()=>setInsurance('no'),
+                                                children: "No"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/PopupModal.jsx",
+                                                lineNumber: 263,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/PopupModal.jsx",
+                                        lineNumber: 261,
+                                        columnNumber: 15
+                                    }, this),
+                                    insurance === 'no' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "ins-hint",
+                                        children: "No worries — we help you get covered before surgery."
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/PopupModal.jsx",
+                                        lineNumber: 266,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/PopupModal.jsx",
+                                lineNumber: 259,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                type: "submit",
+                                className: "btn btn-accent popup-submit",
+                                "data-state": btnState || undefined,
+                                children: btnState === 'loading' ? 'Submitting…' : btnState === 'done' ? "✓ We'll call you soon!" : 'Book My Free Consultation'
+                            }, void 0, false, {
+                                fileName: "[project]/components/PopupModal.jsx",
+                                lineNumber: 270,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "popup-trust",
+                                children: "No spam · No fees · 100% confidential"
+                            }, void 0, false, {
+                                fileName: "[project]/components/PopupModal.jsx",
+                                lineNumber: 277,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/PopupModal.jsx",
+                        lineNumber: 244,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/components/PopupModal.jsx",
+                    lineNumber: 243,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/components/PopupModal.jsx",
+            lineNumber: 192,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/components/PopupModal.jsx",
+        lineNumber: 191,
+        columnNumber: 5
+    }, this);
+}
+_s3(PopupModal, "eu7iMHtFQWhAeqoq1pofjuZCY1E=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$PopupContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePopup"]
+    ];
+});
+_c3 = PopupModal;
+var _c, _c1, _c2, _c3;
+__turbopack_context__.k.register(_c, "FloatingField");
+__turbopack_context__.k.register(_c1, "PhoneField");
+__turbopack_context__.k.register(_c2, "FloatingSelect");
+__turbopack_context__.k.register(_c3, "PopupModal");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
 }),
 "[project]/components/Loader.jsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
@@ -360,11 +1194,404 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
 }),
-"[project]/components/HeroForm.jsx [app-client] (ecmascript)", ((__turbopack_context__, module, exports) => {
+"[project]/components/HeroForm.jsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
 
-const e = new Error("Could not parse module '[project]/components/HeroForm.jsx'\n\nExpected '</', got 'ident'");
-e.code = 'MODULE_UNPARSABLE';
-throw e;
+__turbopack_context__.s([
+    "default",
+    ()=>HeroForm
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature(), _s2 = __turbopack_context__.k.signature(), _s3 = __turbopack_context__.k.signature();
+'use client';
+;
+const CONDITIONS = [
+    'Weight loss surgery',
+    'Piles / Fistula / Fissure',
+    'Hernia',
+    'Gallstones',
+    'Gynaecology',
+    'Kidney stones',
+    'Varicose veins',
+    'Cataract / LASIK',
+    'Knee / Spine',
+    'Other'
+];
+function FloatingField({ id, name, type = 'text', label, autoComplete }) {
+    _s();
+    const [filled, setFilled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: `field${filled ? ' is-filled' : ''}`,
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                type: type,
+                id: id,
+                name: name,
+                autoComplete: autoComplete,
+                required: true,
+                onChange: (e)=>setFilled(e.target.value.length > 0)
+            }, void 0, false, {
+                fileName: "[project]/components/HeroForm.jsx",
+                lineNumber: 21,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                htmlFor: id,
+                children: label
+            }, void 0, false, {
+                fileName: "[project]/components/HeroForm.jsx",
+                lineNumber: 29,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/HeroForm.jsx",
+        lineNumber: 20,
+        columnNumber: 5
+    }, this);
+}
+_s(FloatingField, "MkQi+4uT0GV4Vp4Wmxhf6xJST84=");
+_c = FloatingField;
+function PhoneField({ id, name }) {
+    _s1();
+    const [digits, setDigits] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
+    const [focused, setFocused] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
+    const active = focused || digits.length > 0;
+    function handleChange(e) {
+        const val = e.target.value.replace(/\D/g, '').slice(0, 10);
+        setDigits(val);
+        if (error) setError('');
+    }
+    function handleBlur() {
+        setFocused(false);
+        if (digits.length > 0 && digits.length !== 10) setError('Enter a valid 10-digit number');
+    }
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "phone-wrap",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `phone-field-box${active ? ' active' : ''}${focused ? ' focused' : ''}${error ? ' has-error' : ''}`,
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "phone-field-label",
+                        children: "Mobile number"
+                    }, void 0, false, {
+                        fileName: "[project]/components/HeroForm.jsx",
+                        lineNumber: 54,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "phone-input-row",
+                        children: [
+                            active && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "phone-prefix",
+                                children: "+91"
+                            }, void 0, false, {
+                                fileName: "[project]/components/HeroForm.jsx",
+                                lineNumber: 56,
+                                columnNumber: 22
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                type: "tel",
+                                id: id,
+                                name: name,
+                                value: digits,
+                                inputMode: "numeric",
+                                autoComplete: "tel",
+                                required: true,
+                                onChange: handleChange,
+                                onFocus: ()=>{
+                                    setFocused(true);
+                                    setError('');
+                                },
+                                onBlur: handleBlur
+                            }, void 0, false, {
+                                fileName: "[project]/components/HeroForm.jsx",
+                                lineNumber: 57,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/HeroForm.jsx",
+                        lineNumber: 55,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/HeroForm.jsx",
+                lineNumber: 53,
+                columnNumber: 7
+            }, this),
+            error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "field-error",
+                children: error
+            }, void 0, false, {
+                fileName: "[project]/components/HeroForm.jsx",
+                lineNumber: 71,
+                columnNumber: 17
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/HeroForm.jsx",
+        lineNumber: 52,
+        columnNumber: 5
+    }, this);
+}
+_s1(PhoneField, "t2GpWz9CsgysugvTu7Ix0MuCu2k=");
+_c1 = PhoneField;
+function FloatingSelect({ id, name, label, options }) {
+    _s2();
+    const [value, setValue] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: `field${value ? ' has-value' : ''}`,
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
+                id: id,
+                name: name,
+                required: true,
+                value: value,
+                onChange: (e)=>setValue(e.target.value),
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                        value: "",
+                        disabled: true
+                    }, void 0, false, {
+                        fileName: "[project]/components/HeroForm.jsx",
+                        lineNumber: 87,
+                        columnNumber: 9
+                    }, this),
+                    options.map((o)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                            value: o,
+                            children: o
+                        }, o, false, {
+                            fileName: "[project]/components/HeroForm.jsx",
+                            lineNumber: 88,
+                            columnNumber: 27
+                        }, this))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/HeroForm.jsx",
+                lineNumber: 80,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                htmlFor: id,
+                children: label
+            }, void 0, false, {
+                fileName: "[project]/components/HeroForm.jsx",
+                lineNumber: 90,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/HeroForm.jsx",
+        lineNumber: 79,
+        columnNumber: 5
+    }, this);
+}
+_s2(FloatingSelect, "A2PXPeq8TepW328gUMM4+o8Xryo=");
+_c2 = FloatingSelect;
+function HeroForm() {
+    _s3();
+    const [btnState, setBtnState] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [insurance, setInsurance] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const formRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    async function handleSubmit(e) {
+        e.preventDefault();
+        if (btnState) return;
+        setBtnState('loading');
+        const data = new FormData(formRef.current);
+        try {
+            const res = await fetch('/api/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: data.get('name'),
+                    phone: data.get('phone') ? `+91 ${data.get('phone')}` : '',
+                    city: data.get('city'),
+                    condition: data.get('condition'),
+                    insurance: insurance || 'Not specified'
+                })
+            });
+            if (res.ok) {
+                setBtnState('done');
+                setTimeout(()=>{
+                    setBtnState(null);
+                    formRef.current?.reset();
+                    setInsurance(null);
+                }, 1800);
+            } else {
+                setBtnState(null);
+                alert('Something went wrong. Please try again.');
+            }
+        } catch  {
+            setBtnState(null);
+            alert('Something went wrong. Please try again.');
+        }
+    }
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
+        className: "glass-card hero-form h-anim d5",
+        id: "hero-form",
+        ref: formRef,
+        onSubmit: handleSubmit,
+        noValidate: true,
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                children: "Get a free consultation"
+            }, void 0, false, {
+                fileName: "[project]/components/HeroForm.jsx",
+                lineNumber: 145,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "sub",
+                children: "Our team calls back within 2 hours."
+            }, void 0, false, {
+                fileName: "[project]/components/HeroForm.jsx",
+                lineNumber: 146,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FloatingField, {
+                id: "hf-name",
+                name: "name",
+                label: "Full name",
+                autoComplete: "name"
+            }, void 0, false, {
+                fileName: "[project]/components/HeroForm.jsx",
+                lineNumber: 148,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(PhoneField, {
+                id: "hf-phone",
+                name: "phone"
+            }, void 0, false, {
+                fileName: "[project]/components/HeroForm.jsx",
+                lineNumber: 149,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FloatingSelect, {
+                id: "hf-city",
+                name: "city",
+                label: "City",
+                options: [
+                    'Pune',
+                    'Delhi'
+                ]
+            }, void 0, false, {
+                fileName: "[project]/components/HeroForm.jsx",
+                lineNumber: 150,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FloatingSelect, {
+                id: "hf-cond",
+                name: "condition",
+                label: "Condition",
+                options: CONDITIONS
+            }, void 0, false, {
+                fileName: "[project]/components/HeroForm.jsx",
+                lineNumber: 151,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "ins-toggle-wrap",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "ins-toggle-label",
+                        children: "Do you have health insurance?"
+                    }, void 0, false, {
+                        fileName: "[project]/components/HeroForm.jsx",
+                        lineNumber: 154,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "ins-toggle",
+                        role: "group",
+                        "aria-label": "Insurance",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                type: "button",
+                                className: `ins-opt${insurance === 'yes' ? ' active' : ''}`,
+                                onClick: ()=>setInsurance('yes'),
+                                children: "Yes"
+                            }, void 0, false, {
+                                fileName: "[project]/components/HeroForm.jsx",
+                                lineNumber: 156,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                type: "button",
+                                className: `ins-opt${insurance === 'no' ? ' active' : ''}`,
+                                onClick: ()=>setInsurance('no'),
+                                children: "No"
+                            }, void 0, false, {
+                                fileName: "[project]/components/HeroForm.jsx",
+                                lineNumber: 157,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/HeroForm.jsx",
+                        lineNumber: 155,
+                        columnNumber: 9
+                    }, this),
+                    insurance === 'no' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "ins-hint",
+                        children: "No worries — we help you get covered before surgery."
+                    }, void 0, false, {
+                        fileName: "[project]/components/HeroForm.jsx",
+                        lineNumber: 160,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/HeroForm.jsx",
+                lineNumber: 153,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                type: "submit",
+                className: "btn btn-accent",
+                style: {
+                    height: 52,
+                    marginTop: 6
+                },
+                "data-state": btnState || undefined,
+                children: btnState === 'loading' ? 'Submitting…' : btnState === 'done' ? "✓ We'll call you soon!" : 'Book My Free Consultation'
+            }, void 0, false, {
+                fileName: "[project]/components/HeroForm.jsx",
+                lineNumber: 164,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "trust",
+                children: "No spam · No fees · 100% confidential"
+            }, void 0, false, {
+                fileName: "[project]/components/HeroForm.jsx",
+                lineNumber: 172,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/HeroForm.jsx",
+        lineNumber: 138,
+        columnNumber: 5
+    }, this);
+}
+_s3(HeroForm, "XV6R9IROk/4pMDmWyD0aslYavwk=");
+_c3 = HeroForm;
+var _c, _c1, _c2, _c3;
+__turbopack_context__.k.register(_c, "FloatingField");
+__turbopack_context__.k.register(_c1, "PhoneField");
+__turbopack_context__.k.register(_c2, "FloatingSelect");
+__turbopack_context__.k.register(_c3, "HeroForm");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
 }),
 "[project]/components/Hero.jsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";

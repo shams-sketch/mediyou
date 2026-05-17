@@ -80,21 +80,25 @@ function PhoneField({ id, name }) {
   }
 
   return (
-    <div className={`field phone-field${active ? ' is-filled' : ''}${error ? ' has-error' : ''}`}>
-      {active && <span className="phone-prefix">+91</span>}
-      <input
-        type="tel"
-        id={id}
-        name={name}
-        value={digits}
-        inputMode="numeric"
-        autoComplete="tel"
-        required
-        onChange={handleChange}
-        onFocus={() => { setFocused(true); setError('') }}
-        onBlur={handleBlur}
-      />
-      <label htmlFor={id}>Mobile number</label>
+    <div className="phone-wrap">
+      <div className={`phone-field-box${active ? ' active' : ''}${focused ? ' focused' : ''}${error ? ' has-error' : ''}`}>
+        <span className="phone-field-label">Mobile number</span>
+        <div className="phone-input-row">
+          {active && <span className="phone-prefix">+91</span>}
+          <input
+            type="tel"
+            id={id}
+            name={name}
+            value={digits}
+            inputMode="numeric"
+            autoComplete="tel"
+            required
+            onChange={handleChange}
+            onFocus={() => { setFocused(true); setError('') }}
+            onBlur={handleBlur}
+          />
+        </div>
+      </div>
       {error && <span className="field-error">{error}</span>}
     </div>
   )

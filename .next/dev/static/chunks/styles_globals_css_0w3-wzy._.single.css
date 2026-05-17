@@ -786,6 +786,80 @@ input, select, textarea {
   margin-top: 4px;
 }
 
+.phone-wrap {
+  flex-direction: column;
+  gap: 4px;
+  display: flex;
+}
+
+.phone-field-box {
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  height: 52px;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+  background: #fffc;
+  position: relative;
+}
+
+.phone-field-box.focused {
+  border-color: var(--medi-green);
+  box-shadow: var(--focus-ring);
+  animation: focusPulse .6s var(--ease-out);
+}
+
+.phone-field-box.has-error {
+  box-shadow: none;
+  border-color: #e53e3e;
+}
+
+.phone-field-label {
+  font: 400 14px/1 var(--font-sans);
+  color: var(--fg-muted);
+  pointer-events: none;
+  transition: top .2s var(--ease-out), font-size .2s var(--ease-out), color .2s var(--ease-out);
+  position: absolute;
+  top: 16px;
+  left: 14px;
+}
+
+.phone-field-box.active .phone-field-label {
+  color: var(--medi-green);
+  font-size: 11px;
+  top: 6px;
+}
+
+.phone-input-row {
+  align-items: center;
+  gap: 3px;
+  display: flex;
+  position: absolute;
+  inset: 18px 14px 8px;
+}
+
+.phone-prefix {
+  font: 400 15px/1 var(--font-sans);
+  color: var(--fg-strong);
+  flex-shrink: 0;
+}
+
+.phone-input-row input {
+  min-width: 0;
+  font: 400 15px/1 var(--font-sans);
+  color: var(--fg-strong);
+  background: none;
+  border: none;
+  outline: none;
+  flex: 1;
+  width: 100%;
+  padding: 0;
+}
+
+.field-error {
+  font: 400 12px/1.3 var(--font-sans);
+  color: #e53e3e;
+  padding-left: 2px;
+}
+
 .ins-toggle-wrap {
   flex-direction: column;
   gap: 8px;
