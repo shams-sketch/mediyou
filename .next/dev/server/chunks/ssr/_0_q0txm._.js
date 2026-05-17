@@ -270,72 +270,49 @@ function FloatingField({ id, name, type = 'text', label, autoComplete }) {
 }
 function PhoneField({ id, name }) {
     const [digits, setDigits] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const [focused, setFocused] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const active = focused || digits.length > 0;
     function handleChange(e) {
         const val = e.target.value.replace(/\D/g, '').slice(0, 10);
         setDigits(val);
         if (error) setError('');
     }
     function handleBlur() {
-        setFocused(false);
         if (digits.length > 0 && digits.length !== 10) setError('Enter a valid 10-digit number');
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "phone-wrap",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: `phone-field-box${active ? ' active' : ''}${focused ? ' focused' : ''}${error ? ' has-error' : ''}`,
+                className: `field${digits.length > 0 ? ' is-filled' : ''}${error ? ' has-error' : ''}`,
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "phone-field-label",
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                        type: "tel",
+                        id: id,
+                        name: name,
+                        value: digits,
+                        inputMode: "numeric",
+                        autoComplete: "tel",
+                        required: true,
+                        onChange: handleChange,
+                        onBlur: handleBlur,
+                        onFocus: ()=>setError('')
+                    }, void 0, false, {
+                        fileName: "[project]/components/PopupModal.jsx",
+                        lineNumber: 82,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                        htmlFor: id,
                         children: "Mobile number"
                     }, void 0, false, {
                         fileName: "[project]/components/PopupModal.jsx",
-                        lineNumber: 85,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "phone-input-row",
-                        children: [
-                            active && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "phone-prefix",
-                                children: "+91"
-                            }, void 0, false, {
-                                fileName: "[project]/components/PopupModal.jsx",
-                                lineNumber: 87,
-                                columnNumber: 22
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                type: "tel",
-                                id: id,
-                                name: name,
-                                value: digits,
-                                inputMode: "numeric",
-                                autoComplete: "tel",
-                                required: true,
-                                onChange: handleChange,
-                                onFocus: ()=>{
-                                    setFocused(true);
-                                    setError('');
-                                },
-                                onBlur: handleBlur
-                            }, void 0, false, {
-                                fileName: "[project]/components/PopupModal.jsx",
-                                lineNumber: 88,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/PopupModal.jsx",
-                        lineNumber: 86,
+                        lineNumber: 94,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/PopupModal.jsx",
-                lineNumber: 84,
+                lineNumber: 81,
                 columnNumber: 7
             }, this),
             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -343,13 +320,13 @@ function PhoneField({ id, name }) {
                 children: error
             }, void 0, false, {
                 fileName: "[project]/components/PopupModal.jsx",
-                lineNumber: 102,
+                lineNumber: 96,
                 columnNumber: 17
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/PopupModal.jsx",
-        lineNumber: 83,
+        lineNumber: 80,
         columnNumber: 5
     }, this);
 }
@@ -375,7 +352,7 @@ function FloatingSelect({ id, name, label, options, initialValue = '' }) {
                         disabled: true
                     }, void 0, false, {
                         fileName: "[project]/components/PopupModal.jsx",
-                        lineNumber: 123,
+                        lineNumber: 117,
                         columnNumber: 9
                     }, this),
                     options.map((o)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -383,13 +360,13 @@ function FloatingSelect({ id, name, label, options, initialValue = '' }) {
                             children: o
                         }, o, false, {
                             fileName: "[project]/components/PopupModal.jsx",
-                            lineNumber: 124,
+                            lineNumber: 118,
                             columnNumber: 27
                         }, this))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/PopupModal.jsx",
-                lineNumber: 116,
+                lineNumber: 110,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -397,13 +374,13 @@ function FloatingSelect({ id, name, label, options, initialValue = '' }) {
                 children: label
             }, void 0, false, {
                 fileName: "[project]/components/PopupModal.jsx",
-                lineNumber: 126,
+                lineNumber: 120,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/PopupModal.jsx",
-        lineNumber: 115,
+        lineNumber: 109,
         columnNumber: 5
     }, this);
 }
@@ -438,7 +415,7 @@ function PopupModal() {
                 },
                 body: JSON.stringify({
                     name: data.get('name'),
-                    phone: data.get('phone') ? `+91 ${data.get('phone')}` : '',
+                    phone: data.get('phone') || '',
                     city: data.get('city'),
                     condition: data.get('condition'),
                     insurance: insurance || 'Not specified'
@@ -494,7 +471,7 @@ function PopupModal() {
                                 y2: "18"
                             }, void 0, false, {
                                 fileName: "[project]/components/PopupModal.jsx",
-                                lineNumber: 202,
+                                lineNumber: 196,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -504,18 +481,18 @@ function PopupModal() {
                                 y2: "18"
                             }, void 0, false, {
                                 fileName: "[project]/components/PopupModal.jsx",
-                                lineNumber: 202,
+                                lineNumber: 196,
                                 columnNumber: 50
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/PopupModal.jsx",
-                        lineNumber: 201,
+                        lineNumber: 195,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/PopupModal.jsx",
-                    lineNumber: 195,
+                    lineNumber: 189,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -526,7 +503,7 @@ function PopupModal() {
                             children: "Free Consultation"
                         }, void 0, false, {
                             fileName: "[project]/components/PopupModal.jsx",
-                            lineNumber: 208,
+                            lineNumber: 202,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -534,7 +511,7 @@ function PopupModal() {
                             children: "Simplifying Your Surgery Journey"
                         }, void 0, false, {
                             fileName: "[project]/components/PopupModal.jsx",
-                            lineNumber: 209,
+                            lineNumber: 203,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -542,7 +519,7 @@ function PopupModal() {
                             children: "Expert surgeons for 50+ conditions, covered by insurance"
                         }, void 0, false, {
                             fileName: "[project]/components/PopupModal.jsx",
-                            lineNumber: 210,
+                            lineNumber: 204,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ol", {
@@ -555,7 +532,7 @@ function PopupModal() {
                                             children: step.icon
                                         }, void 0, false, {
                                             fileName: "[project]/components/PopupModal.jsx",
-                                            lineNumber: 215,
+                                            lineNumber: 209,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -566,7 +543,7 @@ function PopupModal() {
                                                     children: step.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/PopupModal.jsx",
-                                                    lineNumber: 217,
+                                                    lineNumber: 211,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -574,24 +551,24 @@ function PopupModal() {
                                                     children: step.body
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/PopupModal.jsx",
-                                                    lineNumber: 218,
+                                                    lineNumber: 212,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/PopupModal.jsx",
-                                            lineNumber: 216,
+                                            lineNumber: 210,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, i, true, {
                                     fileName: "[project]/components/PopupModal.jsx",
-                                    lineNumber: 214,
+                                    lineNumber: 208,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/PopupModal.jsx",
-                            lineNumber: 212,
+                            lineNumber: 206,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -605,7 +582,7 @@ function PopupModal() {
                                             children: "50,000+"
                                         }, void 0, false, {
                                             fileName: "[project]/components/PopupModal.jsx",
-                                            lineNumber: 226,
+                                            lineNumber: 220,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -613,20 +590,20 @@ function PopupModal() {
                                             children: "Happy Patients"
                                         }, void 0, false, {
                                             fileName: "[project]/components/PopupModal.jsx",
-                                            lineNumber: 227,
+                                            lineNumber: 221,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/PopupModal.jsx",
-                                    lineNumber: 225,
+                                    lineNumber: 219,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "popup-stat-divider"
                                 }, void 0, false, {
                                     fileName: "[project]/components/PopupModal.jsx",
-                                    lineNumber: 229,
+                                    lineNumber: 223,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -637,7 +614,7 @@ function PopupModal() {
                                             children: "50+"
                                         }, void 0, false, {
                                             fileName: "[project]/components/PopupModal.jsx",
-                                            lineNumber: 231,
+                                            lineNumber: 225,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -645,20 +622,20 @@ function PopupModal() {
                                             children: "Specialities"
                                         }, void 0, false, {
                                             fileName: "[project]/components/PopupModal.jsx",
-                                            lineNumber: 232,
+                                            lineNumber: 226,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/PopupModal.jsx",
-                                    lineNumber: 230,
+                                    lineNumber: 224,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "popup-stat-divider"
                                 }, void 0, false, {
                                     fileName: "[project]/components/PopupModal.jsx",
-                                    lineNumber: 234,
+                                    lineNumber: 228,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -669,7 +646,7 @@ function PopupModal() {
                                             children: "2"
                                         }, void 0, false, {
                                             fileName: "[project]/components/PopupModal.jsx",
-                                            lineNumber: 236,
+                                            lineNumber: 230,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -677,25 +654,25 @@ function PopupModal() {
                                             children: "Cities"
                                         }, void 0, false, {
                                             fileName: "[project]/components/PopupModal.jsx",
-                                            lineNumber: 237,
+                                            lineNumber: 231,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/PopupModal.jsx",
-                                    lineNumber: 235,
+                                    lineNumber: 229,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/PopupModal.jsx",
-                            lineNumber: 224,
+                            lineNumber: 218,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/PopupModal.jsx",
-                    lineNumber: 207,
+                    lineNumber: 201,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -711,7 +688,7 @@ function PopupModal() {
                                 children: "Book a Free Consultation"
                             }, void 0, false, {
                                 fileName: "[project]/components/PopupModal.jsx",
-                                lineNumber: 250,
+                                lineNumber: 244,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -719,7 +696,7 @@ function PopupModal() {
                                 children: "Our team calls back within 2 hours."
                             }, void 0, false, {
                                 fileName: "[project]/components/PopupModal.jsx",
-                                lineNumber: 251,
+                                lineNumber: 245,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FloatingField, {
@@ -729,7 +706,7 @@ function PopupModal() {
                                 autoComplete: "name"
                             }, void 0, false, {
                                 fileName: "[project]/components/PopupModal.jsx",
-                                lineNumber: 253,
+                                lineNumber: 247,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(PhoneField, {
@@ -737,7 +714,7 @@ function PopupModal() {
                                 name: "phone"
                             }, void 0, false, {
                                 fileName: "[project]/components/PopupModal.jsx",
-                                lineNumber: 254,
+                                lineNumber: 248,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FloatingSelect, {
@@ -750,7 +727,7 @@ function PopupModal() {
                                 ]
                             }, void 0, false, {
                                 fileName: "[project]/components/PopupModal.jsx",
-                                lineNumber: 256,
+                                lineNumber: 250,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FloatingSelect, {
@@ -761,7 +738,7 @@ function PopupModal() {
                                 initialValue: condition
                             }, void 0, false, {
                                 fileName: "[project]/components/PopupModal.jsx",
-                                lineNumber: 257,
+                                lineNumber: 251,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -772,7 +749,7 @@ function PopupModal() {
                                         children: "Do you have health insurance?"
                                     }, void 0, false, {
                                         fileName: "[project]/components/PopupModal.jsx",
-                                        lineNumber: 260,
+                                        lineNumber: 254,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -787,7 +764,7 @@ function PopupModal() {
                                                 children: "Yes"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/PopupModal.jsx",
-                                                lineNumber: 262,
+                                                lineNumber: 256,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -797,13 +774,13 @@ function PopupModal() {
                                                 children: "No"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/PopupModal.jsx",
-                                                lineNumber: 263,
+                                                lineNumber: 257,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/PopupModal.jsx",
-                                        lineNumber: 261,
+                                        lineNumber: 255,
                                         columnNumber: 15
                                     }, this),
                                     insurance === 'no' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -811,13 +788,13 @@ function PopupModal() {
                                         children: "No worries — we help you get covered before surgery."
                                     }, void 0, false, {
                                         fileName: "[project]/components/PopupModal.jsx",
-                                        lineNumber: 266,
+                                        lineNumber: 260,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/PopupModal.jsx",
-                                lineNumber: 259,
+                                lineNumber: 253,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -827,7 +804,7 @@ function PopupModal() {
                                 children: btnState === 'loading' ? 'Submitting…' : btnState === 'done' ? "✓ We'll call you soon!" : 'Book My Free Consultation'
                             }, void 0, false, {
                                 fileName: "[project]/components/PopupModal.jsx",
-                                lineNumber: 270,
+                                lineNumber: 264,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -835,29 +812,29 @@ function PopupModal() {
                                 children: "No spam · No fees · 100% confidential"
                             }, void 0, false, {
                                 fileName: "[project]/components/PopupModal.jsx",
-                                lineNumber: 277,
+                                lineNumber: 271,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/PopupModal.jsx",
-                        lineNumber: 244,
+                        lineNumber: 238,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/PopupModal.jsx",
-                    lineNumber: 243,
+                    lineNumber: 237,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/PopupModal.jsx",
-            lineNumber: 192,
+            lineNumber: 186,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/PopupModal.jsx",
-        lineNumber: 191,
+        lineNumber: 185,
         columnNumber: 5
     }, this);
 }
@@ -1170,72 +1147,49 @@ function FloatingField({ id, name, type = 'text', label, autoComplete }) {
 }
 function PhoneField({ id, name }) {
     const [digits, setDigits] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const [focused, setFocused] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const active = focused || digits.length > 0;
     function handleChange(e) {
         const val = e.target.value.replace(/\D/g, '').slice(0, 10);
         setDigits(val);
         if (error) setError('');
     }
     function handleBlur() {
-        setFocused(false);
         if (digits.length > 0 && digits.length !== 10) setError('Enter a valid 10-digit number');
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "phone-wrap",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: `phone-field-box${active ? ' active' : ''}${focused ? ' focused' : ''}${error ? ' has-error' : ''}`,
+                className: `field${digits.length > 0 ? ' is-filled' : ''}${error ? ' has-error' : ''}`,
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "phone-field-label",
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                        type: "tel",
+                        id: id,
+                        name: name,
+                        value: digits,
+                        inputMode: "numeric",
+                        autoComplete: "tel",
+                        required: true,
+                        onChange: handleChange,
+                        onBlur: handleBlur,
+                        onFocus: ()=>setError('')
+                    }, void 0, false, {
+                        fileName: "[project]/components/HeroForm.jsx",
+                        lineNumber: 51,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                        htmlFor: id,
                         children: "Mobile number"
                     }, void 0, false, {
                         fileName: "[project]/components/HeroForm.jsx",
-                        lineNumber: 54,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "phone-input-row",
-                        children: [
-                            active && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "phone-prefix",
-                                children: "+91"
-                            }, void 0, false, {
-                                fileName: "[project]/components/HeroForm.jsx",
-                                lineNumber: 56,
-                                columnNumber: 22
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                type: "tel",
-                                id: id,
-                                name: name,
-                                value: digits,
-                                inputMode: "numeric",
-                                autoComplete: "tel",
-                                required: true,
-                                onChange: handleChange,
-                                onFocus: ()=>{
-                                    setFocused(true);
-                                    setError('');
-                                },
-                                onBlur: handleBlur
-                            }, void 0, false, {
-                                fileName: "[project]/components/HeroForm.jsx",
-                                lineNumber: 57,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/HeroForm.jsx",
-                        lineNumber: 55,
+                        lineNumber: 63,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/HeroForm.jsx",
-                lineNumber: 53,
+                lineNumber: 50,
                 columnNumber: 7
             }, this),
             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1243,13 +1197,13 @@ function PhoneField({ id, name }) {
                 children: error
             }, void 0, false, {
                 fileName: "[project]/components/HeroForm.jsx",
-                lineNumber: 71,
+                lineNumber: 65,
                 columnNumber: 17
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/HeroForm.jsx",
-        lineNumber: 52,
+        lineNumber: 49,
         columnNumber: 5
     }, this);
 }
@@ -1270,7 +1224,7 @@ function FloatingSelect({ id, name, label, options }) {
                         disabled: true
                     }, void 0, false, {
                         fileName: "[project]/components/HeroForm.jsx",
-                        lineNumber: 87,
+                        lineNumber: 81,
                         columnNumber: 9
                     }, this),
                     options.map((o)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1278,13 +1232,13 @@ function FloatingSelect({ id, name, label, options }) {
                             children: o
                         }, o, false, {
                             fileName: "[project]/components/HeroForm.jsx",
-                            lineNumber: 88,
+                            lineNumber: 82,
                             columnNumber: 27
                         }, this))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/HeroForm.jsx",
-                lineNumber: 80,
+                lineNumber: 74,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -1292,13 +1246,13 @@ function FloatingSelect({ id, name, label, options }) {
                 children: label
             }, void 0, false, {
                 fileName: "[project]/components/HeroForm.jsx",
-                lineNumber: 90,
+                lineNumber: 84,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/HeroForm.jsx",
-        lineNumber: 79,
+        lineNumber: 73,
         columnNumber: 5
     }, this);
 }
@@ -1319,7 +1273,7 @@ function HeroForm() {
                 },
                 body: JSON.stringify({
                     name: data.get('name'),
-                    phone: data.get('phone') ? `+91 ${data.get('phone')}` : '',
+                    phone: data.get('phone') || '',
                     city: data.get('city'),
                     condition: data.get('condition'),
                     insurance: insurance || 'Not specified'
@@ -1352,7 +1306,7 @@ function HeroForm() {
                 children: "Get a free consultation"
             }, void 0, false, {
                 fileName: "[project]/components/HeroForm.jsx",
-                lineNumber: 145,
+                lineNumber: 139,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1360,7 +1314,7 @@ function HeroForm() {
                 children: "Our team calls back within 2 hours."
             }, void 0, false, {
                 fileName: "[project]/components/HeroForm.jsx",
-                lineNumber: 146,
+                lineNumber: 140,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FloatingField, {
@@ -1370,7 +1324,7 @@ function HeroForm() {
                 autoComplete: "name"
             }, void 0, false, {
                 fileName: "[project]/components/HeroForm.jsx",
-                lineNumber: 148,
+                lineNumber: 142,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(PhoneField, {
@@ -1378,7 +1332,7 @@ function HeroForm() {
                 name: "phone"
             }, void 0, false, {
                 fileName: "[project]/components/HeroForm.jsx",
-                lineNumber: 149,
+                lineNumber: 143,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FloatingSelect, {
@@ -1391,7 +1345,7 @@ function HeroForm() {
                 ]
             }, void 0, false, {
                 fileName: "[project]/components/HeroForm.jsx",
-                lineNumber: 150,
+                lineNumber: 144,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FloatingSelect, {
@@ -1401,7 +1355,7 @@ function HeroForm() {
                 options: CONDITIONS
             }, void 0, false, {
                 fileName: "[project]/components/HeroForm.jsx",
-                lineNumber: 151,
+                lineNumber: 145,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1412,7 +1366,7 @@ function HeroForm() {
                         children: "Do you have health insurance?"
                     }, void 0, false, {
                         fileName: "[project]/components/HeroForm.jsx",
-                        lineNumber: 154,
+                        lineNumber: 148,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1427,7 +1381,7 @@ function HeroForm() {
                                 children: "Yes"
                             }, void 0, false, {
                                 fileName: "[project]/components/HeroForm.jsx",
-                                lineNumber: 156,
+                                lineNumber: 150,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1437,13 +1391,13 @@ function HeroForm() {
                                 children: "No"
                             }, void 0, false, {
                                 fileName: "[project]/components/HeroForm.jsx",
-                                lineNumber: 157,
+                                lineNumber: 151,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/HeroForm.jsx",
-                        lineNumber: 155,
+                        lineNumber: 149,
                         columnNumber: 9
                     }, this),
                     insurance === 'no' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1451,13 +1405,13 @@ function HeroForm() {
                         children: "No worries — we help you get covered before surgery."
                     }, void 0, false, {
                         fileName: "[project]/components/HeroForm.jsx",
-                        lineNumber: 160,
+                        lineNumber: 154,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/HeroForm.jsx",
-                lineNumber: 153,
+                lineNumber: 147,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1471,7 +1425,7 @@ function HeroForm() {
                 children: btnState === 'loading' ? 'Submitting…' : btnState === 'done' ? "✓ We'll call you soon!" : 'Book My Free Consultation'
             }, void 0, false, {
                 fileName: "[project]/components/HeroForm.jsx",
-                lineNumber: 164,
+                lineNumber: 158,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1479,13 +1433,13 @@ function HeroForm() {
                 children: "No spam · No fees · 100% confidential"
             }, void 0, false, {
                 fileName: "[project]/components/HeroForm.jsx",
-                lineNumber: 172,
+                lineNumber: 166,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/HeroForm.jsx",
-        lineNumber: 138,
+        lineNumber: 132,
         columnNumber: 5
     }, this);
 }

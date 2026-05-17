@@ -33,9 +33,7 @@ function FloatingField({ id, name, type = 'text', label, autoComplete }) {
 
 function PhoneField({ id, name }) {
   const [digits, setDigits] = useState('')
-  const [focused, setFocused] = useState(false)
   const [error, setError] = useState('')
-  const active = focused || digits.length > 0
 
   function handleChange(e) {
     const val = e.target.value.replace(/\D/g, '').slice(0, 10)
@@ -44,29 +42,25 @@ function PhoneField({ id, name }) {
   }
 
   function handleBlur() {
-    setFocused(false)
     if (digits.length > 0 && digits.length !== 10) setError('Enter a valid 10-digit number')
   }
 
   return (
     <div className="phone-wrap">
-      <div className={`phone-field-box${active ? ' active' : ''}${focused ? ' focused' : ''}${error ? ' has-error' : ''}`}>
-        <span className="phone-field-label">Mobile number</span>
-        <div className="phone-input-row">
-          {active && <span className="phone-prefix">+91</span>}
-          <input
-            type="tel"
-            id={id}
-            name={name}
-            value={digits}
-            inputMode="numeric"
-            autoComplete="tel"
-            required
-            onChange={handleChange}
-            onFocus={() => { setFocused(true); setError('') }}
-            onBlur={handleBlur}
-          />
-        </div>
+      <div className={`field${digits.length > 0 ? ' is-filled' : ''}${error ? ' has-error' : ''}`}>
+        <input
+          type="tel"
+          id={id}
+          name={name}
+          value={digits}
+          inputMode="numeric"
+          autoComplete="tel"
+          required
+          onChange={handleChange}
+          onBlur={handleBlur}
+          onFocus={() => setError('')}
+        />
+        <label htmlFor={id}>Mobile number</label>
       </div>
       {error && <span className="field-error">{error}</span>}
     </div>
@@ -110,7 +104,7 @@ export default function HeroForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: data.get('name'),
-          phone: data.get('phone') ? `+91 ${data.get('phone')}` : '',
+          phone: data.get('phone') || '',
           city: data.get('city'),
           condition: data.get('condition'),
           insurance: insurance || 'Not specified',
