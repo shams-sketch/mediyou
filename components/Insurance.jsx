@@ -1,5 +1,6 @@
 'use client'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import { usePopup } from '../context/PopupContext'
 
 const CheckIcon = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -24,6 +25,7 @@ const INSURERS = ['Star Health', 'HDFC Ergo', 'Niva Bupa', 'Care Health', 'Bajaj
 export default function Insurance() {
   const leftRef = useScrollReveal()
   const rightRef = useScrollReveal()
+  const { openPopup } = usePopup()
 
   return (
     <section className="section" id="insurance" style={{ background: 'transparent' }}>
@@ -92,9 +94,9 @@ export default function Insurance() {
                 ))}
               </div>
 
-              <a href="#hero-form" className="btn btn-accent" style={{ alignSelf: 'flex-start' }}>
+              <button onClick={openPopup} className="btn btn-accent" style={{ alignSelf: 'flex-start', border: 'none', cursor: 'pointer' }}>
                 Check My Insurance Coverage <span className="arr">→</span>
-              </a>
+              </button>
               <p style={{ margin: 0, fontSize: 12, color: 'var(--text-soft)', opacity: 0.7 }}>
                 We'll only call if you ask us to.
               </p>

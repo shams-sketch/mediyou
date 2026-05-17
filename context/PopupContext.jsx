@@ -5,23 +5,29 @@ const PopupContext = createContext(null)
 
 export function PopupProvider({ children }) {
   const [isOpen, setIsOpen] = useState(false)
+  const [condition, setCondition] = useState('')
 
   useEffect(() => {
     if (sessionStorage.getItem('popup_shown')) return
-
     const timer = setTimeout(() => {
       setIsOpen(true)
       sessionStorage.setItem('popup_shown', '1')
     }, 5000)
-
     return () => clearTimeout(timer)
   }, [])
 
-  function openPopup() { setIsOpen(true) }
-  function closePopup() { setIsOpen(false) }
+  function openPopup(cond = '') {
+    setCondition(cond)
+    setIsOpen(true)
+  }
+
+  function closePopup() {
+    setIsOpen(false)
+    setCondition('')
+  }
 
   return (
-    <PopupContext.Provider value={{ isOpen, openPopup, closePopup }}>
+    <PopupContext.Provider value={{ isOpen, condition, openPopup, closePopup }}>
       {children}
     </PopupContext.Provider>
   )

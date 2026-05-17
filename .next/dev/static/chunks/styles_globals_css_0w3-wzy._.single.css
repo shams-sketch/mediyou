@@ -786,6 +786,51 @@ input, select, textarea {
   margin-top: 4px;
 }
 
+.ins-toggle-wrap {
+  flex-direction: column;
+  gap: 8px;
+  display: flex;
+}
+
+.ins-toggle-label {
+  font: 500 13px/1 var(--font-sans);
+  color: var(--fg-strong);
+}
+
+.ins-toggle {
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  display: grid;
+}
+
+.ins-opt {
+  border-radius: var(--radius-sm);
+  font: 500 14px/1 var(--font-sans);
+  color: var(--fg-muted);
+  cursor: pointer;
+  background: #fff9;
+  border: 1.5px solid #0000001a;
+  padding: 10px 0;
+  transition: border-color .15s, background .15s, color .15s;
+}
+
+.ins-opt:hover {
+  border-color: var(--medi-green);
+  color: var(--medi-green);
+}
+
+.ins-opt.active {
+  border-color: var(--medi-green);
+  background: var(--medi-green-tint);
+  color: var(--medi-green);
+}
+
+.ins-hint {
+  font: 400 12px/1.4 var(--font-sans);
+  color: var(--medi-orange);
+  margin: 0;
+}
+
 @keyframes bob {
   0%, 100% {
     transform: translateY(0);
@@ -979,9 +1024,13 @@ input, select, textarea {
   border-radius: var(--radius-md);
   cursor: pointer;
   transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  text-align: left;
+  font: inherit;
   background: #ffffffa6;
   border: 1px solid #ffffffd9;
   flex-direction: column;
+  width: 100%;
+  padding: 0;
   display: flex;
   overflow: hidden;
   box-shadow: 0 4px 20px #0000000f;

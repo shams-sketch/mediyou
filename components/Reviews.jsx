@@ -4,15 +4,15 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 const REVIEWS = [
   {
     quote: '"I had been putting off piles surgery for 3 years out of fear. MediYou\'s team called me, explained everything calmly, arranged the doctor, and my insurance covered it fully. I was home the same evening."',
-    name: 'Priya S.', location: 'Pune', treatment: 'Piles Treatment',
+    name: 'Aditya P.', location: 'Pune', treatment: 'Piles Treatment',
   },
   {
     quote: '"I didn\'t know hernia surgery could be this simple. They handled the hospital, the paperwork, and even sent a cab. I just showed up. Best decision I made for my health."',
-    name: 'Arvind K.', location: 'Delhi', treatment: 'Hernia Surgery',
+    name: 'Vishal D.', location: 'Delhi', treatment: 'Hernia Surgery',
   },
   {
     quote: '"The weight loss surgery changed my life. I\'d been struggling for 10 years. MediYou made the whole process — consultation, surgery, follow-up — completely stress free."',
-    name: 'Meena R.', location: 'Pune', treatment: 'Bariatric Surgery',
+    name: 'Kiran M.', location: 'Pune', treatment: 'Bariatric Surgery',
   },
 ]
 

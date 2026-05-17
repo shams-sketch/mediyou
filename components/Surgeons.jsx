@@ -3,24 +3,21 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const SURGEONS = [
   {
-    photo: '/assets/doctors/dr-anjali-mehta.png',
-    name: 'Dr. Anjali Mehta',
+    name: 'Dr. Anjali',
     spec: 'Bariatric & Laparoscopic Surgeon',
     meta: '14 years experience · Pune',
     quote: '"I chose MediYou because it lets me focus entirely on the patient. The coordination, insurance, and follow-up are handled — so when I meet a patient, we talk only about their health."',
     procedures: 312,
   },
   {
-    photo: '/assets/doctors/dr-rajan-kulkarni.png',
-    name: 'Dr. Rajan Kulkarni',
+    name: 'Dr. Pankaj',
     spec: 'Proctologist & General Surgeon',
     meta: '11 years experience · Delhi',
     quote: '"My patients come in anxious and leave reassured. MediYou gives them the support system around the surgery that I can\'t provide alone — and it shows in their recovery."',
     procedures: 248,
   },
   {
-    photo: '/assets/doctors/dr-priya-nambiar.png',
-    name: 'Dr. Priya Nambiar',
+    name: 'Dr. Mariya',
     spec: 'Gynaecologist & Laparoscopic Surgeon',
     meta: '9 years experience · Pune & Delhi',
     quote: '"The patients who come through MediYou are better informed and less scared. That makes my job easier and their outcomes better. It\'s a genuine partnership."',
@@ -44,18 +41,6 @@ export default function Surgeons() {
           {SURGEONS.map(s => (
             <div className="surgeon-card" key={s.name}>
               <div className="surgeon-head">
-                <img
-                  src={s.photo}
-                  alt={s.name}
-                  className="surgeon-avatar"
-                  style={{
-                    width: 56,
-                    height: 56,
-                    borderRadius: '50%',
-                    objectFit: 'cover',
-                    border: '2px solid var(--medi-green-tint)',
-                  }}
-                />
                 <div>
                   <div className="surgeon-name">{s.name}</div>
                   <div className="surgeon-spec">{s.spec}</div>

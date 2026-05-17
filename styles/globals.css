@@ -410,6 +410,46 @@ input, select, textarea { font-family: inherit; }
 .hero-form p.sub { font: 400 14px/1.5 var(--font-sans); color: var(--fg-muted); margin: 0 0 4px; }
 .hero-form .trust { font: 400 12px/1.4 var(--font-sans); color: var(--fg-muted); text-align: center; margin-top: 4px; }
 
+/* Insurance toggle */
+.ins-toggle-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ins-toggle-label {
+  font: 500 13px/1 var(--font-sans);
+  color: var(--fg-strong);
+}
+.ins-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.ins-opt {
+  padding: 10px 0;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.6);
+  font: 500 14px/1 var(--font-sans);
+  color: var(--fg-muted);
+  cursor: pointer;
+  transition: border-color 150ms ease, background 150ms ease, color 150ms ease;
+}
+.ins-opt:hover {
+  border-color: var(--medi-green);
+  color: var(--medi-green);
+}
+.ins-opt.active {
+  border-color: var(--medi-green);
+  background: var(--medi-green-tint);
+  color: var(--medi-green);
+}
+.ins-hint {
+  font: 400 12px/1.4 var(--font-sans);
+  color: var(--medi-orange);
+  margin: 0;
+}
+
 @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
 
 @media (max-width: 1080px) { .float-card.fc-rating { left: -12px; } .float-card.fc-insurance { right: -12px; } }
@@ -517,6 +557,10 @@ input, select, textarea { font-family: inherit; }
   cursor: pointer;
   box-shadow: 0 4px 20px rgba(0,0,0,0.06);
   transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  text-align: left;
+  padding: 0;
+  font: inherit;
+  width: 100%;
 }
 .spec-card:hover {
   transform: translateY(-6px);

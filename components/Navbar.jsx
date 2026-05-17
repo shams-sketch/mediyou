@@ -1,8 +1,10 @@
 'use client'
 import { useEffect, useRef } from 'react'
+import { usePopup } from '../context/PopupContext'
 
 export default function Navbar() {
   const navRef = useRef(null)
+  const { openPopup } = usePopup()
 
   useEffect(() => {
     const nav = navRef.current
@@ -44,7 +46,7 @@ export default function Navbar() {
           <a href="#">Blog</a>
         </div>
         <div className="nav-cta">
-          <a href="#hero-form" className="btn btn-accent btn-sm">Book FREE Consultation</a>
+          <button onClick={openPopup} className="btn btn-accent btn-sm" style={{ border: 'none', cursor: 'pointer' }}>Book FREE Consultation</button>
         </div>
         {/* Mobile-only call button — replaces burger */}
         <a href="tel:+919217214842" className="nav-call btn btn-accent btn-sm">

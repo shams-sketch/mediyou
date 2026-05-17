@@ -14,22 +14,8 @@ const CONDITIONS = [
   'Other',
 ]
 
-function FloatingField({ id, type = 'text', label, autoComplete, children }) {
+function FloatingField({ id, type = 'text', label, autoComplete }) {
   const [filled, setFilled] = useState(false)
-
-  function handleChange(e) {
-    setFilled(e.target.value.length > 0)
-  }
-
-  if (children) {
-    return (
-      <div className={`field has-value`}>
-        {children}
-        <label htmlFor={id}>{label}</label>
-      </div>
-    )
-  }
-
   return (
     <div className={`field${filled ? ' is-filled' : ''}`}>
       <input
@@ -37,8 +23,26 @@ function FloatingField({ id, type = 'text', label, autoComplete, children }) {
         id={id}
         autoComplete={autoComplete}
         required
-        onChange={handleChange}
+        onChange={e => setFilled(e.target.value.length > 0)}
       />
+      <label htmlFor={id}>{label}</label>
+    </div>
+  )
+}
+
+function FloatingSelect({ id, label, options }) {
+  const [value, setValue] = useState('')
+  return (
+    <div className={`field${value ? ' has-value' : ''}`}>
+      <select
+        id={id}
+        required
+        value={value}
+        onChange={e => setValue(e.target.value)}
+      >
+        <option value="" disabled />
+        {options.map(o => <option key={o} value={o}>{o}</option>)}
+      </select>
       <label htmlFor={id}>{label}</label>
     </div>
   )
@@ -46,6 +50,7 @@ function FloatingField({ id, type = 'text', label, autoComplete, children }) {
 
 export default function HeroForm() {
   const [btnState, setBtnState] = useState(null)
+  const [insurance, setInsurance] = useState(null)
   const formRef = useRef(null)
 
   function handleSubmit(e) {
@@ -74,20 +79,18 @@ export default function HeroForm() {
 
       <FloatingField id="hf-name" label="Full name" autoComplete="name" />
       <FloatingField id="hf-phone" type="tel" label="Mobile number" autoComplete="tel" />
+      <FloatingSelect id="hf-city" label="City" options={['Pune', 'Delhi']} />
+      <FloatingSelect id="hf-cond" label="Condition" options={CONDITIONS} />
 
-      <div className="field has-value">
-        <select id="hf-city" required>
-          <option value="Pune">Pune</option>
-          <option value="Delhi">Delhi</option>
-        </select>
-        <label htmlFor="hf-city">City</label>
-      </div>
-
-      <div className="field has-value">
-        <select id="hf-cond" required>
-          {CONDITIONS.map(c => <option key={c}>{c}</option>)}
-        </select>
-        <label htmlFor="hf-cond">Condition</label>
+      <div className="ins-toggle-wrap">
+        <span className="ins-toggle-label">Do you have health insurance?</span>
+        <div className="ins-toggle" role="group" aria-label="Insurance">
+          <button type="button" className={`ins-opt${insurance === 'yes' ? ' active' : ''}`} onClick={() => setInsurance('yes')}>Yes</button>
+          <button type="button" className={`ins-opt${insurance === 'no' ? ' active' : ''}`} onClick={() => setInsurance('no')}>No</button>
+        </div>
+        {insurance === 'no' && (
+          <p className="ins-hint">No worries — we help you get covered before surgery.</p>
+        )}
       </div>
 
       <button
