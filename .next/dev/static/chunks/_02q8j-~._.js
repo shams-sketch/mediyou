@@ -960,7 +960,7 @@ function Navbar() {
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                    href: "tel:+919000000000",
+                    href: "tel:+919217214842",
                     className: "nav-call btn btn-accent btn-sm",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -1507,7 +1507,7 @@ function Hero() {
                                 className: "hero-actions h-anim d4",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                        href: "tel:+919000000000",
+                                        href: "tel:+919217214842",
                                         className: "btn btn-accent",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -1531,7 +1531,7 @@ function Hero() {
                                                 lineNumber: 95,
                                                 columnNumber: 15
                                             }, this),
-                                            "Call on +91 9000000000"
+                                            "Call on +91 92172 14842"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Hero.jsx",
@@ -4762,13 +4762,13 @@ function Home() {
                 children: [
                     "Free consultation + insurance support on every surgery — Call ",
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                        children: "1800-XXX-XXXX"
+                        children: "+91 92172 14842"
                     }, void 0, false, {
                         fileName: "[project]/app/page.js",
                         lineNumber: 25,
                         columnNumber: 71
                     }, this),
-                    " · Mon–Sat 8am–8pm"
+                    " · Mon–Sun 24x7"
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/page.js",

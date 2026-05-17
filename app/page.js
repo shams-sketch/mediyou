@@ -22,7 +22,7 @@ export default function Home() {
     <PopupProvider>
       <Loader />
       <div className="announce">
-        Free consultation + insurance support on every surgery — Call <strong>1800-XXX-XXXX</strong> · Mon–Sat 8am–8pm
+        Free consultation + insurance support on every surgery — Call <strong>+91 92172 14842</strong> · Mon–Sun 24x7
       </div>
       <Navbar />
       <Hero />
