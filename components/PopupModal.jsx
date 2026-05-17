@@ -62,6 +62,44 @@ function FloatingField({ id, name, type = 'text', label, autoComplete }) {
   )
 }
 
+function PhoneField({ id, name }) {
+  const [digits, setDigits] = useState('')
+  const [focused, setFocused] = useState(false)
+  const [error, setError] = useState('')
+  const active = focused || digits.length > 0
+
+  function handleChange(e) {
+    const val = e.target.value.replace(/\D/g, '').slice(0, 10)
+    setDigits(val)
+    if (error) setError('')
+  }
+
+  function handleBlur() {
+    setFocused(false)
+    if (digits.length > 0 && digits.length !== 10) setError('Enter a valid 10-digit number')
+  }
+
+  return (
+    <div className={`field phone-field${active ? ' is-filled' : ''}${error ? ' has-error' : ''}`}>
+      {active && <span className="phone-prefix">+91</span>}
+      <input
+        type="tel"
+        id={id}
+        name={name}
+        value={digits}
+        inputMode="numeric"
+        autoComplete="tel"
+        required
+        onChange={handleChange}
+        onFocus={() => { setFocused(true); setError('') }}
+        onBlur={handleBlur}
+      />
+      <label htmlFor={id}>Mobile number</label>
+      {error && <span className="field-error">{error}</span>}
+    </div>
+  )
+}
+
 function FloatingSelect({ id, name, label, options, initialValue = '' }) {
   const [value, setValue] = useState(initialValue)
 
@@ -115,7 +153,7 @@ export default function PopupModal() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: data.get('name'),
-          phone: data.get('phone'),
+          phone: data.get('phone') ? `+91 ${data.get('phone')}` : '',
           city: data.get('city'),
           condition: data.get('condition'),
           insurance: insurance || 'Not specified',
@@ -209,7 +247,7 @@ export default function PopupModal() {
             <p className="popup-form-sub">Our team calls back within 2 hours.</p>
 
             <FloatingField id="pf-name" name="name" label="Full name" autoComplete="name" />
-            <FloatingField id="pf-phone" name="phone" type="tel" label="Mobile number" autoComplete="tel" />
+            <PhoneField id="pf-phone" name="phone" />
 
             <FloatingSelect id="pf-city" name="city" label="City" options={['Pune', 'Delhi']} />
             <FloatingSelect id="pf-cond" name="condition" label="Condition" options={CONDITIONS} initialValue={condition} />

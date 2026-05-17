@@ -410,6 +410,30 @@ input, select, textarea { font-family: inherit; }
 .hero-form p.sub { font: 400 14px/1.5 var(--font-sans); color: var(--fg-muted); margin: 0 0 4px; }
 .hero-form .trust { font: 400 12px/1.4 var(--font-sans); color: var(--fg-muted); text-align: center; margin-top: 4px; }
 
+/* Phone field */
+.phone-field { position: relative; }
+.phone-prefix {
+  position: absolute;
+  left: 14px;
+  bottom: 13px;
+  font: 400 15px/1 var(--font-sans);
+  color: var(--fg-strong);
+  pointer-events: none;
+  z-index: 1;
+}
+.phone-field.is-filled input { padding-left: 48px; }
+.field-error {
+  display: block;
+  font: 400 12px/1.3 var(--font-sans);
+  color: #e53e3e;
+  margin-top: 4px;
+  padding-left: 2px;
+}
+.field.has-error input,
+.field.has-error select {
+  border-color: #e53e3e;
+}
+
 /* Insurance toggle */
 .ins-toggle-wrap {
   display: flex;
