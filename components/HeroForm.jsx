@@ -125,7 +125,7 @@ export default function HeroForm() {
         style={{ height: 52, marginTop: 6 }}
         data-state={btnState || undefined}
       >
-        {btnState === 'loading' ? 'Submitting…' : btnState === 'done' ? '✓ We'll call you soon!' : 'Book My Free Consultation'}
+        {btnState === 'loading' ? 'Submitting…' : btnState === 'done' ? "✓ We'll call you soon!" : 'Book My Free Consultation'}
       </button>
       <div className="trust">No spam · No fees · 100% confidential</div>
     </form>

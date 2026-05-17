@@ -230,7 +230,7 @@ export default function PopupModal() {
               className="btn btn-accent popup-submit"
               data-state={btnState || undefined}
             >
-              {btnState === 'loading' ? 'Submitting…' : btnState === 'done' ? '✓ We'll call you soon!' : 'Book My Free Consultation'}
+              {btnState === 'loading' ? 'Submitting…' : btnState === 'done' ? "✓ We'll call you soon!" : 'Book My Free Consultation'}
             </button>
             <p className="popup-trust">No spam · No fees · 100% confidential</p>
           </form>
