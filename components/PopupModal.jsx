@@ -45,13 +45,14 @@ const STEPS = [
   },
 ]
 
-function FloatingField({ id, type = 'text', label, autoComplete }) {
+function FloatingField({ id, name, type = 'text', label, autoComplete }) {
   const [filled, setFilled] = useState(false)
   return (
     <div className={`field${filled ? ' is-filled' : ''}`}>
       <input
         type={type}
         id={id}
+        name={name}
         autoComplete={autoComplete}
         required
         onChange={e => setFilled(e.target.value.length > 0)}
@@ -61,7 +62,7 @@ function FloatingField({ id, type = 'text', label, autoComplete }) {
   )
 }
 
-function FloatingSelect({ id, label, options, initialValue = '' }) {
+function FloatingSelect({ id, name, label, options, initialValue = '' }) {
   const [value, setValue] = useState(initialValue)
 
   useEffect(() => {
@@ -72,6 +73,7 @@ function FloatingSelect({ id, label, options, initialValue = '' }) {
     <div className={`field${value ? ' has-value' : ''}`}>
       <select
         id={id}
+        name={name}
         required
         value={value}
         onChange={e => setValue(e.target.value)}
@@ -100,17 +102,41 @@ export default function PopupModal() {
     return () => { document.body.style.overflow = '' }
   }, [isOpen])
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
     if (btnState) return
     setBtnState('loading')
-    setTimeout(() => {
-      setBtnState('done')
-      setTimeout(() => {
+
+    const data = new FormData(formRef.current)
+
+    try {
+      const res = await fetch('/api/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.get('name'),
+          phone: data.get('phone'),
+          city: data.get('city'),
+          condition: data.get('condition'),
+          insurance: insurance || 'Not specified',
+        }),
+      })
+
+      if (res.ok) {
+        setBtnState('done')
+        setTimeout(() => {
+          setBtnState(null)
+          setInsurance(null)
+          formRef.current?.reset()
+        }, 1800)
+      } else {
         setBtnState(null)
-        formRef.current?.reset()
-      }, 1800)
-    }, 1100)
+        alert('Something went wrong. Please try again.')
+      }
+    } catch {
+      setBtnState(null)
+      alert('Something went wrong. Please try again.')
+    }
   }
 
   function handleOverlayClick(e) {
@@ -182,11 +208,11 @@ export default function PopupModal() {
             <h3 className="popup-form-title">Book a Free Consultation</h3>
             <p className="popup-form-sub">Our team calls back within 2 hours.</p>
 
-            <FloatingField id="pf-name" label="Full name" autoComplete="name" />
-            <FloatingField id="pf-phone" type="tel" label="Mobile number" autoComplete="tel" />
+            <FloatingField id="pf-name" name="name" label="Full name" autoComplete="name" />
+            <FloatingField id="pf-phone" name="phone" type="tel" label="Mobile number" autoComplete="tel" />
 
-            <FloatingSelect id="pf-city" label="City" options={['Pune', 'Delhi']} />
-            <FloatingSelect id="pf-cond" label="Condition" options={CONDITIONS} initialValue={condition} />
+            <FloatingSelect id="pf-city" name="city" label="City" options={['Pune', 'Delhi']} />
+            <FloatingSelect id="pf-cond" name="condition" label="Condition" options={CONDITIONS} initialValue={condition} />
 
             <div className="ins-toggle-wrap">
               <span className="ins-toggle-label">Do you have health insurance?</span>
@@ -204,7 +230,7 @@ export default function PopupModal() {
               className="btn btn-accent popup-submit"
               data-state={btnState || undefined}
             >
-              Book My Free Consultation
+              {btnState === 'loading' ? 'Submitting…' : btnState === 'done' ? '✓ We'll call you soon!' : 'Book My Free Consultation'}
             </button>
             <p className="popup-trust">No spam · No fees · 100% confidential</p>
           </form>
