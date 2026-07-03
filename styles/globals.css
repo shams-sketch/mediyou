@@ -958,6 +958,64 @@ input, select, textarea { font-family: inherit; }
 }
 
 /* ================================================================ */
+/* LEGAL pages (Privacy Policy, Terms)                              */
+/* ================================================================ */
+.legal { min-height: 100vh; padding: 32px 0 80px; }
+.legal-container { width: 100%; max-width: 820px; margin: 0 auto; padding: 0 32px; }
+@media (max-width: 720px) { .legal-container { padding: 0 20px; } }
+
+.legal-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 0 28px; margin-bottom: 32px;
+  border-bottom: 1px solid rgba(0,168,133,0.14);
+}
+.legal-logo img { height: 34px; width: auto; display: block; }
+.legal-back {
+  color: var(--medi-green-dark); font: 500 14px/1 var(--font-sans);
+  transition: color var(--transition-base);
+}
+.legal-back:hover { color: var(--medi-orange); }
+
+.legal-body {
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.85);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border-radius: var(--radius-lg);
+  padding: 44px 48px;
+}
+@media (max-width: 720px) { .legal-body { padding: 32px 24px; } }
+
+.legal-body h1 {
+  font: 700 clamp(28px, 5vw, 38px)/1.15 var(--font-sans);
+  color: var(--fg-strong); margin: 0 0 8px;
+}
+.legal-updated {
+  color: var(--fg-muted); font: 500 14px/1.4 var(--font-sans);
+  margin: 0 0 28px;
+}
+.legal-body h2 {
+  font: 600 clamp(19px, 3vw, 22px)/1.3 var(--font-sans);
+  color: var(--medi-green-dark); margin: 34px 0 12px;
+}
+.legal-body p {
+  color: var(--fg-strong); font: 400 16px/1.7 var(--font-sans);
+  margin: 0 0 16px;
+}
+.legal-body ul { margin: 0 0 16px; padding-left: 22px; }
+.legal-body li {
+  color: var(--fg-strong); font: 400 16px/1.7 var(--font-sans);
+  margin-bottom: 6px;
+}
+.legal-body a { color: var(--medi-green-dark); text-decoration: underline; }
+.legal-body a:hover { color: var(--medi-orange); }
+.legal-contact {
+  background: var(--medi-green-tint); border-radius: var(--radius-md);
+  padding: 20px 22px; margin-top: 8px;
+}
+
+/* ================================================================ */
 /* SCROLL REVEAL                                                    */
 /* ================================================================ */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out); will-change: opacity, transform; }

@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import { usePopup } from '../context/PopupContext'
 
 const TREATMENTS = ['Weight Loss Surgery', 'Piles Treatment', 'Hernia Surgery', 'Kidney Stones', 'Varicose Veins', 'Tonsillectomy']
@@ -45,7 +46,7 @@ export default function Footer() {
         <div className="footer-bottom">
           <span>© 2025 MediYou Health Pvt. Ltd. All rights reserved.</span>
           <div className="links">
-            <a href="#">Privacy</a>
+            <Link href="/privacy-policy">Privacy</Link>
             <a href="#">Terms &amp; Condition</a>
           </div>
         </div>
