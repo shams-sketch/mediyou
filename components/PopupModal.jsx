@@ -159,6 +159,9 @@ export default function PopupModal() {
       })
 
       if (res.ok) {
+        if (typeof window !== 'undefined' && window.fbq) {
+          window.fbq('track', 'Lead')
+        }
         setBtnState('done')
         setTimeout(() => {
           setBtnState(null)
